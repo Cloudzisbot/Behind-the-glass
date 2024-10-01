@@ -6,17 +6,20 @@
     <title>Behind the Glass</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             background-color: #f7f7f7;
             margin: 0;
             padding: 0;
         }
         .book-container {
-            width: 600px;
-            height: 800px;
-            margin: auto;
+            width: 80%;
+            height: 80vh;
+            margin: 20px auto;
             position: relative;
             perspective: 1500px;
+            border: 1px solid #333;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         .book {
             width: 100%;
@@ -31,21 +34,24 @@
             width: 50%;
             height: 100%;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
             border: 1px solid #333;
             position: absolute;
             backface-visibility: hidden;
-            padding: 20px;
+            padding: 30px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
         }
         .page:nth-child(1) {
             transform: rotateY(0deg);
         }
         .page:nth-child(2) {
             transform: rotateY(180deg);
+        }
+        h3 {
+            margin-top: 0;
         }
         .navigation {
             display: flex;
@@ -58,6 +64,7 @@
             background-color: #333;
             color: white;
             cursor: pointer;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -123,14 +130,10 @@
             </div>
 
             <!-- Continue adding pages for each chapter -->
-            <!-- Example for another chapter -->
             <div class="page" id="page3">
                 <h3>Chapter Three: Splintering Reality</h3>
                 <p>
-                    The Hollow Inn was suffocating.
-                </p>
-                <p>
-                    No matter how many times Claire told herself to breathe, to calm down, it didn’t help. The air in her room felt thick, too heavy to draw in properly, and the walls seemed closer than before, as if the space had shrunk overnight. She paced back and forth across the creaking floorboards, her footsteps echoing louder in the stillness, her hand still throbbing from the gash across her palm.
+                    The Hollow Inn was suffocating. No matter how many times Claire told herself to breathe, to calm down, it didn’t help. The air in her room felt thick, too heavy to draw in properly, and the walls seemed closer than before, as if the space had shrunk overnight. She paced back and forth across the creaking floorboards, her footsteps echoing louder in the stillness, her hand still throbbing from the gash across her palm.
                 </p>
                 <p>
                     She couldn’t stop thinking about the text messages. It’s always been watching. Now it’s watching you. The words seared into her brain, repeating over and over like a broken record. Who had sent them? How had they known about the mirrors? No one else had been in the house, no one could have seen what she saw, what happened in that room.
@@ -142,14 +145,13 @@
             </div>
 
             <!-- Add more chapters as needed -->
-            <!-- Make sure to follow the structure of the above page for each new chapter -->
         </div>
     </div>
 
     <script>
         let currentPage = 0;
         const pages = document.querySelectorAll('.page');
-        
+
         function nextPage() {
             if (currentPage < pages.length - 1) {
                 pages[currentPage].style.transform = 'rotateY(-180deg)';
@@ -157,7 +159,7 @@
                 pages[currentPage].style.transform = 'rotateY(0deg)';
             }
         }
-        
+
         function prevPage() {
             if (currentPage > 0) {
                 pages[currentPage].style.transform = 'rotateY(180deg)';
