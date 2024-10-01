@@ -15,45 +15,37 @@
             width: 600px;
             height: 800px;
             margin: auto;
-            border: 2px solid #333;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
             position: relative;
+            perspective: 1500px;
         }
-        .cover {
+        .book {
+            width: 100%;
             height: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: url('file-58V55aXeoleUxZulkPCPKA3y') no-repeat center center;
-            background-size: cover;
-        }
-        .cover h1 {
-            color: white;
-            font-size: 48px;
-            text-align: center;
-            margin: 0;
-            position: absolute;
-            top: 20%;
-        }
-        .cover h2 {
-            color: white;
-            font-size: 24px;
-            text-align: center;
-            margin: 0;
-            position: absolute;
-            bottom: 20%;
-        }
-        .content {
-            display: none;
-            padding: 20px;
+            flex-direction: row;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
         }
         .page {
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            position: absolute;
+            backface-visibility: hidden;
+            padding: 20px;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100%;
+        }
+        .page:nth-child(1) {
+            transform: rotateY(0deg);
+        }
+        .page:nth-child(2) {
+            transform: rotateY(180deg);
         }
         .navigation {
             display: flex;
@@ -72,11 +64,7 @@
 <body>
 
     <div class="book-container">
-        <div class="cover">
-            <h1>Behind the Glass</h1>
-            <h2>by Ryan Lee</h2>
-        </div>
-        <div class="content">
+        <div class="book" id="book">
             <div class="page" id="page1">
                 <h3>Chapter One: Fading Edges</h3>
                 <p>
@@ -85,29 +73,96 @@
                 <p>
                     She shifted in her seat as the bus groaned to a stop, her muscles stiff from the hours of travel. The town stretched out before her in a melancholy silence, its main street flanked by shops that looked as though they hadn’t changed in decades. There were few people on the street, and those who were moved with a kind of lethargic disinterest, their faces half-hidden behind scarves and upturned collars.
                 </p>
+                <p>
+                    Claire didn’t mind. She was here to escape—to forget—and Ashford seemed the perfect place to vanish.
+                </p>
+                <p>
+                    As she stepped off the bus, the cold air hit her, sharp and biting, cutting through her jacket like a knife. She pulled her collar up and adjusted the strap of her backpack, glancing around as the bus pulled away, its rumble disappearing into the distance.
+                </p>
+                <p>
+                    A single road stretched ahead of her, lined with sagging buildings and faded signs. The hotel she’d booked for her stay was at the far end of town, near the forest that loomed in the distance, a thick, dark presence at the edge of her vision. It felt like it was watching her.
+                </p>
+                <p>
+                    She walked slowly, her breath coming in small clouds, her footsteps the only sound in the otherwise silent street. The houses along the way looked abandoned, their windows dark, shutters closed against the chill. Ashford was not a place for new beginnings, but for endings. Perfect, Claire thought. That was what she needed—an end to the noise in her mind, the constant thrum of memories she couldn’t erase, no matter how hard she tried.
+                </p>
+                <p>
+                    The road stretched on, disappearing into the mist, and as Claire walked, she felt the edges of her thoughts begin to blur, as if the town itself was slowly absorbing her, pulling her into its quiet, forgotten folds.
+                </p>
                 <div class="navigation">
                     <button onclick="nextPage()">Next &#8594;</button>
                 </div>
             </div>
-            <!-- Add more pages as needed -->
+
+            <div class="page" id="page2">
+                <h3>Chapter Two: The Mirror's Gaze</h3>
+                <p>
+                    The estate was colder now, or perhaps it was just Claire. Her skin crawled with a sense of unseen eyes upon her as she stood before the largest mirror in the Reflection Room, the silence pressing down like a thick shroud. The reflection stared back at her, but it wasn’t quite right. Something deep in her gut told her to run, to turn her back on this house and never return. But she was frozen in place, her breath coming in short, sharp bursts, every inhale shallow as if the air itself was thickening, clogging her lungs.
+                </p>
+                <p>
+                    The silence was deafening. Every heartbeat, every rustle of fabric seemed amplified, echoing in the decayed corners of the room. She couldn’t explain the sensation, but it was as if something, or someone, stood just behind the mirror, watching her through the thin layer of glass, waiting for her to notice it. But the more Claire focused, the less sense the feeling made. It was just her reflection.
+                </p>
+                <p>
+                    Right?
+                </p>
+                <p>
+                    And yet, the more she stared, the more she felt her thoughts slip, like the floor beneath her was becoming unsteady, reality softening under the weight of some unspoken force.
+                </p>
+                <p>
+                    Her own eyes looked back at her, wide and slightly hollow, but there was something else lurking beneath the surface—something in the way her reflection smiled when her lips remained perfectly still.
+                </p>
+                <p>
+                    The smile was wrong.
+                </p>
+                <p>
+                    Her stomach lurched, twisting into tight, painful knots. The nausea was sudden, violent. Her legs trembled under the weight of her terror, but she forced herself to stay still, frozen in front of the mirror as though moving might invite the thing behind the glass to break free. The air grew impossibly heavy, as if the room itself were closing in on her. Shadows that shouldn’t have been there pooled in the corners of her vision, and the sense of something malicious just out of sight gnawed at the edges of her consciousness.
+                </p>
+                <div class="navigation">
+                    <button onclick="prevPage()">&#8592; Previous</button>
+                    <button onclick="nextPage()">Next &#8594;</button>
+                </div>
+            </div>
+
+            <!-- Continue adding pages for each chapter -->
+            <!-- Example for another chapter -->
+            <div class="page" id="page3">
+                <h3>Chapter Three: Splintering Reality</h3>
+                <p>
+                    The Hollow Inn was suffocating.
+                </p>
+                <p>
+                    No matter how many times Claire told herself to breathe, to calm down, it didn’t help. The air in her room felt thick, too heavy to draw in properly, and the walls seemed closer than before, as if the space had shrunk overnight. She paced back and forth across the creaking floorboards, her footsteps echoing louder in the stillness, her hand still throbbing from the gash across her palm.
+                </p>
+                <p>
+                    She couldn’t stop thinking about the text messages. It’s always been watching. Now it’s watching you. The words seared into her brain, repeating over and over like a broken record. Who had sent them? How had they known about the mirrors? No one else had been in the house, no one could have seen what she saw, what happened in that room.
+                </p>
+                <div class="navigation">
+                    <button onclick="prevPage()">&#8592; Previous</button>
+                    <button onclick="nextPage()">Next &#8594;</button>
+                </div>
+            </div>
+
+            <!-- Add more chapters as needed -->
+            <!-- Make sure to follow the structure of the above page for each new chapter -->
         </div>
     </div>
 
     <script>
         let currentPage = 0;
         const pages = document.querySelectorAll('.page');
+        
         function nextPage() {
             if (currentPage < pages.length - 1) {
-                pages[currentPage].style.display = 'none';
+                pages[currentPage].style.transform = 'rotateY(-180deg)';
                 currentPage++;
-                pages[currentPage].style.display = 'flex';
+                pages[currentPage].style.transform = 'rotateY(0deg)';
             }
         }
+        
         function prevPage() {
             if (currentPage > 0) {
-                pages[currentPage].style.display = 'none';
+                pages[currentPage].style.transform = 'rotateY(180deg)';
                 currentPage--;
-                pages[currentPage].style.display = 'flex';
+                pages[currentPage].style.transform = 'rotateY(0deg)';
             }
         }
     </script>
