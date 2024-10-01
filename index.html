@@ -3,166 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Book Title</title>
+    <title>Behind the Glass</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
-            background-color: #f0f0f0;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 0;
         }
-        h1, h2, h3 {
-            color: navy;
-        }
-        .container {
-            max-width: 800px;
+        .book-container {
+            width: 600px;
+            height: 800px;
             margin: auto;
-            background: #fff;
+            border: 2px solid #333;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .cover {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('file-58V55aXeoleUxZulkPCPKA3y') no-repeat center center;
+            background-size: cover;
+        }
+        .cover h1 {
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            top: 20%;
+        }
+        .cover h2 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            bottom: 20%;
+        }
+        .content {
+            display: none;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
         }
         .navigation {
             display: flex;
             justify-content: space-between;
-            margin: 20px 0;
+            margin-top: 20px;
         }
-        button {
-            padding: 10px 20px;
-            background-color: navy;
-            color: white;
+        .navigation button {
+            padding: 10px;
             border: none;
-            border-radius: 5px;
+            background-color: #333;
+            color: white;
             cursor: pointer;
-        }
-        button:hover {
-            background-color: darkblue;
-        }
-        .bookmark {
-            display: inline-block;
-            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Your Book Title</h1>
-    <h2>Chapter One: Fading Edges</h2>
-    <p id="chapter-content">The town of Ashford felt like it belonged to another world. Fog clung to its streets like the ghost of something ancient and forgotten, swirling around the narrow alleys and casting everything in a hazy, dreamlike light. Claire stared out of the bus window as it rattled into the town, her fingers pressed against the cold glass, eyes tracing the contours of a place that seemed barely awake. She had wanted to disappear, and Ashford looked like the kind of town that would allow her to do just that.</p>
-    
-    <p>The estate was old, crumbling in places, with a crooked sign hanging over the door that read The Hollow Inn. The name seemed apt.</p>
-    
-    <p>Inside, the warmth hit her like a wall, the musty smell of old wood and dust filling her lungs as she stepped into the lobby. A small fire crackled in the hearth, its flames barely alive, and an old woman sat behind the counter, her eyes dull and glassy as she stared at Claire.</p>
-    
-    <p>“You’re the new girl, then?” the woman rasped, her voice like sandpaper. Her gaze flicked over Claire with disinterest before she turned her attention back to the old radio playing softly beside her.</p>
-    
-    <p>Claire nodded, unsure of what to say. The woman barely moved, her fingers tapping the counter in a slow, rhythmic beat. She handed Claire a tarnished key without a word, her bony hand trembling slightly. The room number was barely visible on the keychain, worn down from years of use.</p>
-
-    <h2>Chapter Two: The Mirror's Gaze</h2>
-    <p>The estate was colder now, or perhaps it was just Claire. Her skin crawled with a sense of unseen eyes upon her as she stood before the largest mirror in the Reflection Room, the silence pressing down like a thick shroud. The reflection stared back at her, but it wasn’t quite right. Something deep in her gut told her to run, to turn her back on this house and never return. But she was frozen in place, her breath coming in short, sharp bursts, every inhale shallow as if the air itself was thickening, clogging her lungs.</p>
-    
-    <p>The silence was deafening. Every heartbeat, every rustle of fabric seemed amplified, echoing in the decayed corners of the room. She couldn’t explain the sensation, but it was as if something, or someone, stood just behind the mirror, watching her through the thin layer of glass, waiting for her to notice it. But the more Claire focused, the less sense the feeling made. It was just her reflection.</p>
-
-    <h2>Chapter Three: Splintering Reality</h2>
-    <p>The Hollow Inn was suffocating. No matter how many times Claire told herself to breathe, to calm down, it didn’t help. The air in her room felt thick, too heavy to draw in properly, and the walls seemed closer than before, as if the space had shrunk overnight. She paced back and forth across the creaking floorboards, her footsteps echoing louder in the stillness, her hand still throbbing from the gash across her palm.</p>
-
-    <h2>Chapter Four: Fractured Time</h2>
-    <p>Claire stumbled backward, away from the mirror and the oppressive atmosphere of the house. Every instinct told her to flee, to get as far away from this place as possible, and this time, she didn’t argue. She ran, her boots thudding against the cracked floorboards, the sound echoing in the empty corridors of the house as she fled down the hallway. The mirrors in the room seemed to follow her with their silent, gleaming presence, their glassy surfaces reflecting pieces of herself she wasn’t ready to confront.</p>
-
-    <h2>Chapter Five: The Blood on Her Hands</h2>
-    <p>It was the blood that caught her attention first. Her hands were sticky, the deep crimson streaked across her fingers, drying under her nails. Her heart stopped. Oh God. Her mind spun, the room tilting around her as she stared at her hands, her breath coming in short, panicked bursts. Where had it come from? What had she done?</p>
-
-    <h2>Chapter Six: The Reflection Takes Control</h2>
-    <p>Claire’s body froze, the chill of the reflection’s words settling deep into her bones. It wasn’t just a reflection. It wasn’t her. It was something else. Something darker. Something she couldn’t control.</p>
-
-    <h2>Chapter Seven: The Reflection's Return</h2>
-    <p>The days passed in a blur after that. Claire couldn’t remember how long she had stayed in the Ashford Estate, wandering through the empty halls, her mind clouded with confusion and fear. The world outside seemed distant, like a dream she couldn’t quite grasp. The reflection’s voice had grown quieter, but it was still there, always whispering, always watching.</p>
-
-    <h2>Chapter Eight: The Final Fragment</h2>
-    <p>Claire stood in front of the mirror again, her heart pounding in her chest as she stared into the reflection’s eyes. It was smiling again, but this time it felt different—less mocking, more… resigned. I’ve always been here, it whispered. You just didn’t want to see me.</p>
-
-    <h2>Chapter Nine: The Aftermath</h2>
-    <p>She had come back inside. She had returned to the mirrors. Claire had started to lose time again. She’d lose hours, sometimes entire days, and when she woke, it was always in strange places.</p>
-
-    <h2>Chapter Ten: Losing Ground</h2>
-    <p>She had been sitting here for hours, unmoving, watching the reflection in the glass—waiting for it to move, to shift, to do something it shouldn’t. But it didn’t. Her reflection sat just as still as she did. Silent. Obedient.</p>
-
-    <h2>Chapter Eleven: The Confrontation</h2>
-    <p>Claire stood in front of the mirror again, her heart pounding in her chest as she stared into the reflection’s eyes. It was smiling again, but this time it felt different—less mocking, more… resigned. I’ve always been here, it whispered. You just didn’t want to see me.</p>
-
-    <h2>Chapter Twelve: The Final Fragment</h2>
-    <p>Claire stood in front of the mirror again, her heart pounding in her chest as she stared into the reflection’s eyes. It was smiling again, but this time it felt different—less mocking, more… resigned. I’ve always been here, it whispered. You just didn’t want to see me.</p>
-
-    <h2>Chapter Thirteen: The Reflection's Return</h2>
-    <p>But she didn’t back down. She didn’t run. She stood her ground, her heart pounding in her chest, her mind clear for the first time in what felt like forever. “I’ll always be here,” the reflection hissed, its voice a high-pitched wail that filled the room, but Claire didn’t flinch. She stood tall, her eyes locked on the reflection as it writhed and twisted in the glass, furious and powerless. For the first time, Claire was in control.</p>
-
-    <div class="navigation">
-        <button onclick="prevChapter()">Previous</button>
-        <button onclick="nextChapter()">Next</button>
+    <div class="book-container">
+        <div class="cover">
+            <h1>Behind the Glass</h1>
+            <h2>by Ryan Lee</h2>
+        </div>
+        <div class="content">
+            <div class="page" id="page1">
+                <h3>Chapter One: Fading Edges</h3>
+                <p>
+                    The town of Ashford felt like it belonged to another world. Fog clung to its streets like the ghost of something ancient and forgotten, swirling around the narrow alleys and casting everything in a hazy, dreamlike light. Claire stared out of the bus window as it rattled into the town, her fingers pressed against the cold glass, eyes tracing the contours of a place that seemed barely awake. She had wanted to disappear, and Ashford looked like the kind of town that would allow her to do just that.
+                </p>
+                <p>
+                    She shifted in her seat as the bus groaned to a stop, her muscles stiff from the hours of travel. The town stretched out before her in a melancholy silence, its main street flanked by shops that looked as though they hadn’t changed in decades. There were few people on the street, and those who were moved with a kind of lethargic disinterest, their faces half-hidden behind scarves and upturned collars.
+                </p>
+                <div class="navigation">
+                    <button onclick="nextPage()">Next &#8594;</button>
+                </div>
+            </div>
+            <!-- Add more pages as needed -->
+        </div>
     </div>
 
-    <div class="bookmark">
-        <button onclick="bookmarkPage()">Bookmark this page</button>
-    </div>
-
-    <div id="bookmarks" style="margin-top: 20px;">
-        <h3>Bookmarks</h3>
-        <ul id="bookmark-list"></ul>
-    </div>
-</div>
-
-<script>
-    let chapters = [
-        "The town of Ashford felt like it belonged to another world. Fog clung to its streets like the ghost of something ancient and forgotten, swirling around the narrow alleys and casting everything in a hazy, dreamlike light. Claire stared out of the bus window as it rattled into the town, her fingers pressed against the cold glass, eyes tracing the contours of a place that seemed barely awake. She had wanted to disappear, and Ashford looked like the kind of town that would allow her to do just that.",
-        "The estate was older, crumbling in places, with a crooked sign hanging over the door that read The Hollow Inn. The name seemed apt. Inside, the warmth hit her like a wall, the musty smell of old wood and dust filling her lungs as she stepped into the lobby. A small fire crackled in the hearth, its flames barely alive, and an old woman sat behind the counter, her eyes dull and glassy as she stared at Claire. “You’re the new girl, then?” the woman rasped, her voice like sandpaper. Her gaze flicked over Claire with disinterest before she turned her attention back to the old radio playing softly beside her.",
-        "Claire nodded, unsure of what to say. The woman barely moved, her fingers tapping the counter in a slow, rhythmic beat. She handed Claire a tarnished key without a word, her bony hand trembling slightly. The room number was barely visible on the keychain, worn down from years of use.",
-        "The estate was colder now, or perhaps it was just Claire. Her skin crawled with a sense of unseen eyes upon her as she stood before the largest mirror in the Reflection Room, the silence pressing down like a thick shroud. The reflection stared back at her, but it wasn’t quite right. Something deep in her gut told her to run, to turn her back on this house and never return. But she was frozen in place, her breath coming in short, sharp bursts, every inhale shallow as if the air itself was thickening, clogging her lungs.",
-        "The Hollow Inn was suffocating. No matter how many times Claire told herself to breathe, to calm down, it didn’t help. The air in her room felt thick, too heavy to draw in properly, and the walls seemed closer than before, as if the space had shrunk overnight. She paced back and forth across the creaking floorboards, her footsteps echoing louder in the stillness, her hand still throbbing from the gash across her palm.",
-        "Claire stumbled backward, away from the mirror and the oppressive atmosphere of the house. Every instinct told her to flee, to get as far away from this place as possible, and this time, she didn’t argue. She ran, her boots thudding against the cracked floorboards, the sound echoing in the empty corridors of the house as she fled down the hallway. The mirrors in the room seemed to follow her with their silent, gleaming presence, their glassy surfaces reflecting pieces of herself she wasn’t ready to confront.",
-        "It was the blood that caught her attention first. Her hands were sticky, the deep crimson streaked across her fingers, drying under her nails. Her heart stopped. Oh God. Her mind spun, the room tilting around her as she stared at her hands, her breath coming in short, panicked bursts. Where had it come from? What had she done?",
-        "Claire’s body froze, the chill of the reflection’s words settling deep into her bones. It wasn’t just a reflection. It wasn’t her. It was something else. Something darker. Something she couldn’t control.",
-        "The days passed in a blur after that. Claire couldn’t remember how long she had stayed in the Ashford Estate, wandering through the empty halls, her mind clouded with confusion and fear. The world outside seemed distant, like a dream she couldn’t quite grasp. The reflection’s voice had grown quieter, but it was still there, always whispering, always watching.",
-        "Claire stood in front of the mirror again, her heart pounding in her chest as she stared into the reflection’s eyes. It was smiling again, but this time it felt different—less mocking, more… resigned. I’ve always been here, it whispered. You just didn’t want to see me.",
-        "She had come back inside. She had returned to the mirrors. Claire had started to lose time again. She’d lose hours, sometimes entire days, and when she woke, it was always in strange places.",
-        "She had been sitting here for hours, unmoving, watching the reflection in the glass—waiting for it to move, to shift, to do something it shouldn’t. But it didn’t. Her reflection sat just as still as she did. Silent. Obedient.",
-        "Claire stood in front of the mirror again, her heart pounding in her chest as she stared into the reflection’s eyes. It was smiling again, but this time it felt different—less mocking, more… resigned. I’ve always been here, it whispered. You just didn’t want to see me.",
-        "Claire stood in front of the mirror again, her heart pounding in her chest as she stared into the reflection’s eyes. It was smiling again, but this time it felt different—less mocking, more… resigned. I’ve always been here, it whispered. You just didn’t want to see me.",
-        "But she didn’t back down. She didn’t run. She stood her ground, her heart pounding in her chest, her mind clear for the first time in what felt like forever. “I’ll always be here,” the reflection hissed, its voice a high-pitched wail that filled the room, but Claire didn’t flinch. She stood tall, her eyes locked on the reflection as it writhed and twisted in the glass, furious and powerless. For the first time, Claire was in control."
-    ];
-
-    let currentChapter = 0;
-
-    function updateChapter() {
-        document.getElementById('chapter-content').innerText = chapters[currentChapter];
-    }
-
-    function nextChapter() {
-        if (currentChapter < chapters.length - 1) {
-            currentChapter++;
-            updateChapter();
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+        function nextPage() {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].style.display = 'none';
+                currentPage++;
+                pages[currentPage].style.display = 'flex';
+            }
         }
-    }
-
-    function prevChapter() {
-        if (currentChapter > 0) {
-            currentChapter--;
-            updateChapter();
+        function prevPage() {
+            if (currentPage > 0) {
+                pages[currentPage].style.display = 'none';
+                currentPage--;
+                pages[currentPage].style.display = 'flex';
+            }
         }
-    }
-
-    function bookmarkPage() {
-        let bookmarks = document.getElementById('bookmark-list');
-        let bookmarkItem = document.createElement('li');
-        bookmarkItem.innerText = 'Bookmark for Chapter ' + (currentChapter + 1);
-        bookmarks.appendChild(bookmarkItem);
-    }
-
-    // Initialize the first chapter
-    updateChapter();
-</script>
+    </script>
 
 </body>
 </html>
